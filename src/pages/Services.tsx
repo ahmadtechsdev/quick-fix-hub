@@ -71,12 +71,6 @@ const Services = () => {
 
                 {/* Price & CTA */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2">
-                  <div>
-                    <p className="text-sm text-muted-foreground">Starting from</p>
-                    <p className="font-display font-bold text-2xl text-primary">
-                      {service.startingPrice}
-                    </p>
-                  </div>
                   <Link to={`/booking?service=${service.id}`}>
                     <Button variant="hero" className="gap-2">
                       Book Now

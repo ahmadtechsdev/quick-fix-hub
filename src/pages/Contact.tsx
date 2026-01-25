@@ -12,19 +12,20 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Phone',
-    content: '+254 700 000 000',
-    href: 'tel:+254700000000',
+    content: '+234 (0) 904 340 0000',
+    secondLine: '+234 (0) 916 218 9362',
+    href: 'tel:+2349043400000',
   },
   {
     icon: Mail,
     title: 'Email',
-    content: 'info@handymanafrica.com',
-    href: 'mailto:info@handymanafrica.com',
+    content: 'handymanafrica@gmail.com',
+    href: 'mailto:handymanafrica@gmail.com',
   },
   {
     icon: MapPin,
-    title: 'Location',
-    content: 'Nairobi, Kenya',
+    title: 'Office Address',
+    content: 'No. 16 Ademola Adetokumbo Crescent, Wuse II, Abuja',
   },
   {
     icon: Clock,
@@ -66,7 +67,7 @@ const Contact = () => {
     setIsSubmitting(false);
   };
 
-  const whatsappNumber = '254700000000';
+  const whatsappNumber = '2349043400000';
   const whatsappMessage = encodeURIComponent('Hello! I have a question about your services.');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -119,6 +120,14 @@ const Contact = () => {
                       </a>
                     ) : (
                       <p className="text-muted-foreground">{info.content}</p>
+                    )}
+                    {info.secondLine && (
+                      <a
+                        href="tel:+2349162189362"
+                        className="text-muted-foreground hover:text-primary transition-colors block"
+                      >
+                        {info.secondLine}
+                      </a>
                     )}
                   </div>
                 ))}

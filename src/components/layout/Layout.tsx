@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import WhatsAppButton from '../common/WhatsAppButton';
 import MobileBookingCTA from '../common/MobileBookingCTA';
+import SocialMediaCard from '../common/SocialMediaCard';
 
 interface LayoutProps {
   children: ReactNode;
@@ -18,6 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Footer />
       <WhatsAppButton />
       <MobileBookingCTA />
+      <SocialMediaCard />
     </div>
   );
 };

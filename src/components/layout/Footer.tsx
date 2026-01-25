@@ -90,22 +90,25 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 mt-1 text-primary" />
-                <div>
-                  <a href="tel:+254700000000" className="text-background/70 hover:text-primary text-sm transition-colors">
-                    +254 700 000 000
+                <div className="space-y-1">
+                  <a href="tel:+2349043400000" className="text-background/70 hover:text-primary text-sm transition-colors block">
+                    +234 (0) 904 340 0000
+                  </a>
+                  <a href="tel:+2349162189362" className="text-background/70 hover:text-primary text-sm transition-colors block">
+                    +234 (0) 916 218 9362
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 mt-1 text-primary" />
-                <a href="mailto:info@handymanafrica.com" className="text-background/70 hover:text-primary text-sm transition-colors">
-                  info@handymanafrica.com
+                <a href="mailto:handymanafrica@gmail.com" className="text-background/70 hover:text-primary text-sm transition-colors">
+                  handymanafrica@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-1 text-primary" />
                 <span className="text-background/70 text-sm">
-                  Nairobi, Kenya
+                  No. 16 Ademola Adetokumbo Crescent, Wuse II, Abuja
                 </span>
               </li>
             </ul>

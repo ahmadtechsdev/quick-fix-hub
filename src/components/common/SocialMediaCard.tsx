@@ -51,7 +51,7 @@ const SocialMediaCard = () => {
   ];
 
   return (
-    <div className="fixed left-4 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col gap-3">
+    <div className="fixed right-4 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col gap-3">
       {socialLinks.map((link) => {
         const IconComponent = link.icon;
         const isLucideIcon = IconComponent !== TikTokIcon;

@@ -345,49 +345,87 @@ const Booking = () => {
 
             {/* Step 3: Confirmation */}
             {step === 3 && (
-              <div className="animate-fade-in text-center py-12">
-                <div className="w-20 h-20 rounded-full bg-success/10 flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="w-10 h-10 text-success" />
+              <div className="animate-fade-in py-8 md:py-12">
+                {/* Success Icon & Header */}
+                <div className="text-center mb-10">
+                  <div className="w-20 h-20 rounded-full bg-success/10 flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle className="w-10 h-10 text-success" />
+                  </div>
+                  <h2 className="font-display font-bold text-2xl md:text-3xl text-foreground mb-3">
+                    Booking Submitted!
+                  </h2>
+                  <p className="text-muted-foreground text-base md:text-lg max-w-lg mx-auto">
+                    Thank you for choosing HandymanAfrica. Our team will contact you shortly to confirm your appointment.
+                  </p>
                 </div>
-                <h2 className="font-display font-bold text-2xl md:text-3xl text-foreground mb-4">
-                  Booking Submitted!
-                </h2>
-                <p className="text-muted-foreground text-lg max-w-md mx-auto mb-6">
-                  Thank you for choosing HandymanAfrica. Our team will contact you shortly to confirm your appointment.
-                </p>
 
-                <div className="bg-card rounded-xl p-6 max-w-md mx-auto text-left shadow-soft mb-8">
-                  <h4 className="font-semibold text-foreground mb-4">Booking Summary</h4>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-center gap-3">
-                      <FileText className="w-4 h-4 text-primary" />
-                      <span className="text-muted-foreground">Service:</span>
-                      <span className="text-foreground font-medium">{selectedService?.title}</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <User className="w-4 h-4 text-primary" />
-                      <span className="text-muted-foreground">Name:</span>
-                      <span className="text-foreground font-medium">{formData.fullName}</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <MapPin className="w-4 h-4 text-primary" />
-                      <span className="text-muted-foreground">Address:</span>
-                      <span className="text-foreground font-medium">{formData.address}</span>
-                    </div>
-                    {formData.preferredDate && (
-                      <div className="flex items-center gap-3">
-                        <Calendar className="w-4 h-4 text-primary" />
-                        <span className="text-muted-foreground">Date:</span>
-                        <span className="text-foreground font-medium">
-                          {formData.preferredDate} {formData.preferredTime && `at ${formData.preferredTime}`}
-                        </span>
+                {/* Booking Summary Card */}
+                <div className="bg-card rounded-2xl max-w-lg mx-auto shadow-soft border border-border overflow-hidden mb-8">
+                  <div className="bg-primary/5 px-6 py-4 border-b border-border">
+                    <h4 className="font-display font-semibold text-foreground text-lg">Booking Summary</h4>
+                  </div>
+                  <div className="px-6 py-5 space-y-5">
+                    {/* Service */}
+                    <div className="flex items-start gap-4">
+                      <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <FileText className="w-4 h-4 text-primary" />
                       </div>
+                      <div>
+                        <p className="text-xs text-muted-foreground uppercase tracking-wide mb-0.5">Service</p>
+                        <p className="text-foreground font-medium">{selectedService?.title}</p>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-border/50" />
+
+                    {/* Name */}
+                    <div className="flex items-start gap-4">
+                      <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <User className="w-4 h-4 text-primary" />
+                      </div>
+                      <div>
+                        <p className="text-xs text-muted-foreground uppercase tracking-wide mb-0.5">Name</p>
+                        <p className="text-foreground font-medium">{formData.fullName}</p>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-border/50" />
+
+                    {/* Address */}
+                    <div className="flex items-start gap-4">
+                      <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <MapPin className="w-4 h-4 text-primary" />
+                      </div>
+                      <div>
+                        <p className="text-xs text-muted-foreground uppercase tracking-wide mb-0.5">Address</p>
+                        <p className="text-foreground font-medium">{formData.address}</p>
+                      </div>
+                    </div>
+
+                    {/* Date & Time */}
+                    {(formData.preferredDate || formData.preferredTime) && (
+                      <>
+                        <div className="border-t border-border/50" />
+                        <div className="flex items-start gap-4">
+                          <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <CalendarIcon className="w-4 h-4 text-primary" />
+                          </div>
+                          <div>
+                            <p className="text-xs text-muted-foreground uppercase tracking-wide mb-0.5">Preferred Date & Time</p>
+                            <p className="text-foreground font-medium">
+                              {formData.preferredDate && format(new Date(formData.preferredDate), 'MMMM d, yyyy')}
+                              {formData.preferredTime && ` at ${formData.preferredTime}`}
+                            </p>
+                          </div>
+                        </div>
+                      </>
                     )}
                   </div>
                 </div>
 
-                <div className="bg-primary/5 rounded-xl p-4 max-w-md mx-auto">
-                  <p className="text-sm text-foreground">
+                {/* What's Next */}
+                <div className="bg-primary/5 rounded-2xl p-6 max-w-lg mx-auto text-center">
+                  <p className="text-foreground text-sm md:text-base">
                     <strong>What's next?</strong> We'll call or WhatsApp you within 30 minutes to confirm your booking and discuss any details.
                   </p>
                 </div>

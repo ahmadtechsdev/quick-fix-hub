@@ -1,11 +1,16 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { CheckCircle, ArrowLeft, ArrowRight, Calendar, User, MapPin, FileText } from 'lucide-react';
+import { CheckCircle, ArrowLeft, ArrowRight, Calendar as CalendarIcon, User, MapPin, FileText, Clock } from 'lucide-react';
+import { format } from 'date-fns';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { Calendar } from '@/components/ui/calendar';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { cn } from '@/lib/utils';
 import { services } from '@/data/services';
 import { useToast } from '@/hooks/use-toast';
 
@@ -249,24 +254,68 @@ const Booking = () => {
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="preferredDate">Preferred Date</Label>
-                      <Input
-                        id="preferredDate"
-                        name="preferredDate"
-                        type="date"
-                        value={formData.preferredDate}
-                        onChange={handleInputChange}
-                      />
+                      <Label>Preferred Date</Label>
+                      <Popover>
+                        <PopoverTrigger asChild>
+                          <Button
+                            variant="outline"
+                            className={cn(
+                              "w-full justify-between text-left font-normal h-10",
+                              !formData.preferredDate && "text-muted-foreground"
+                            )}
+                          >
+                            <span className="flex items-center gap-2">
+                              <CalendarIcon className="w-4 h-4 text-primary" />
+                              {formData.preferredDate
+                                ? format(new Date(formData.preferredDate), "PPP")
+                                : "Select a date"}
+                            </span>
+                            <CalendarIcon className="w-4 h-4 opacity-50" />
+                          </Button>
+                        </PopoverTrigger>
+                        <PopoverContent className="w-auto p-0 bg-card border-border shadow-elevated z-50" align="start">
+                          <Calendar
+                            mode="single"
+                            selected={formData.preferredDate ? new Date(formData.preferredDate) : undefined}
+                            onSelect={(date) =>
+                              setFormData((prev) => ({
+                                ...prev,
+                                preferredDate: date ? format(date, 'yyyy-MM-dd') : '',
+                              }))
+                            }
+                            disabled={(date) => date < new Date()}
+                            initialFocus
+                            className={cn("p-3 pointer-events-auto")}
+                          />
+                        </PopoverContent>
+                      </Popover>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="preferredTime">Preferred Time</Label>
-                      <Input
-                        id="preferredTime"
-                        name="preferredTime"
-                        type="time"
+                      <Label>Preferred Time</Label>
+                      <Select
                         value={formData.preferredTime}
-                        onChange={handleInputChange}
-                      />
+                        onValueChange={(value) =>
+                          setFormData((prev) => ({ ...prev, preferredTime: value }))
+                        }
+                      >
+                        <SelectTrigger className="w-full h-10">
+                          <span className="flex items-center gap-2">
+                            <Clock className="w-4 h-4 text-primary" />
+                            <SelectValue placeholder="Select a time" />
+                          </span>
+                        </SelectTrigger>
+                        <SelectContent className="bg-card border-border shadow-elevated z-50">
+                          {[
+                            '08:00 AM', '09:00 AM', '10:00 AM', '11:00 AM',
+                            '12:00 PM', '01:00 PM', '02:00 PM', '03:00 PM',
+                            '04:00 PM', '05:00 PM', '06:00 PM',
+                          ].map((time) => (
+                            <SelectItem key={time} value={time}>
+                              {time}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                     </div>
                   </div>
 

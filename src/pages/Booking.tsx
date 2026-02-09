@@ -298,10 +298,13 @@ const Booking = () => {
                           setFormData((prev) => ({ ...prev, preferredTime: value }))
                         }
                       >
-                        <SelectTrigger className="w-full h-10">
-                          <span className="flex items-center gap-2">
-                            <Clock className="w-4 h-4 text-primary" />
-                            <SelectValue placeholder="Select a time" />
+                        <SelectTrigger className="w-full h-10 [&>svg.lucide-chevron-down]:hidden">
+                          <span className="flex items-center justify-between w-full">
+                            <span className="flex items-center gap-2">
+                              <Clock className="w-4 h-4 text-primary" />
+                              <SelectValue placeholder="Select a time" />
+                            </span>
+                            <Clock className="w-4 h-4 opacity-50" />
                           </span>
                         </SelectTrigger>
                         <SelectContent className="bg-card border-border shadow-elevated z-50">

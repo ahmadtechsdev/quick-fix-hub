@@ -170,7 +170,7 @@ const Booking = () => {
                         <div>
                           <h3 className="font-semibold text-foreground">{service.title}</h3>
                           <p className="text-sm text-muted-foreground">
-                            From {service.startingPrice}
+                            {service.shortDescription}
                           </p>
                         </div>
                       </div>

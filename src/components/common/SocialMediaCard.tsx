@@ -1,4 +1,4 @@
-import { Instagram, MessageCircle, Phone, LucideIcon } from 'lucide-react';
+import { Instagram, Facebook, Phone, LucideIcon } from 'lucide-react';
 
 interface SocialLink {
   name: string;
@@ -21,11 +21,11 @@ const SocialMediaCard = () => {
 
   const socialLinks: SocialLink[] = [
     {
-      name: 'WhatsApp',
-      icon: MessageCircle,
-      href: whatsappUrl,
-      color: 'bg-[#25D366] hover:bg-[#20bd5a]',
-      fill: true,
+      name: 'Facebook',
+      icon: Facebook,
+      href: 'https://www.facebook.com/',
+      color: 'bg-[#1877F2] hover:bg-[#166FE5]',
+      fill: false,
     },
     {
       name: 'Instagram',

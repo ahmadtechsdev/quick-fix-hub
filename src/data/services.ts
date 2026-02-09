@@ -15,7 +15,7 @@ export const services = [
       'Safety inspections',
       'Generator installation',
     ],
-    startingPrice: 'KES 2,500',
+    
     image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=300&fit=crop',
   },
   {
@@ -32,7 +32,7 @@ export const services = [
       'Toilet and faucet repairs',
       'Sewer line services',
     ],
-    startingPrice: 'KES 2,000',
+    
     image: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400&h=300&fit=crop',
   },
   {
@@ -49,7 +49,7 @@ export const services = [
       'Thermostat installation',
       'Emergency repairs',
     ],
-    startingPrice: 'KES 3,000',
+    
     image: 'https://images.unsplash.com/photo-1631545806609-21a8b2c9e8f0?w=400&h=300&fit=crop',
   },
   {
@@ -66,7 +66,7 @@ export const services = [
       'Furniture repair',
       'Trim and molding work',
     ],
-    startingPrice: 'KES 3,500',
+    
     image: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&h=300&fit=crop',
   },
   {
@@ -83,7 +83,7 @@ export const services = [
       'Cabinet refinishing',
       'Color consultation',
     ],
-    startingPrice: 'KES 4,000',
+    
     image: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=400&h=300&fit=crop',
   },
   {
@@ -100,7 +100,7 @@ export const services = [
       'Smart home devices',
       'Security system installation',
     ],
-    startingPrice: 'KES 1,500',
+    
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop',
   },
 ];

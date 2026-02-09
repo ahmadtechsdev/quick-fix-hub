@@ -44,10 +44,7 @@ const PopularServices = () => {
                 <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                   {service.shortDescription}
                 </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-primary font-semibold text-sm">
-                    From {service.startingPrice}
-                  </span>
+                <div className="flex items-center justify-end">
                   <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                 </div>
               </div>

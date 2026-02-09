@@ -56,6 +56,7 @@ const Booking = () => {
 
   const handleServiceSelect = (serviceId: string) => {
     setFormData((prev) => ({ ...prev, service: serviceId }));
+    setStep(2);
   };
 
   const handleNext = () => {
@@ -176,12 +177,6 @@ const Booking = () => {
                       </div>
                     </button>
                   ))}
-                </div>
-                <div className="mt-8 flex justify-end">
-                  <Button onClick={handleNext} variant="hero" size="lg" className="gap-2">
-                    Continue
-                    <ArrowRight className="w-4 h-4" />
-                  </Button>
                 </div>
               </div>
             )}

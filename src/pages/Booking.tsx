@@ -260,12 +260,11 @@ const Booking = () => {
                           <Button
                             variant="outline"
                             className={cn(
-                              "w-full justify-between text-left font-normal h-10",
+                              "w-full justify-between text-left font-normal h-10 border-input focus:ring-ring focus:ring-2 focus:ring-offset-2",
                               !formData.preferredDate && "text-muted-foreground"
                             )}
                           >
-                            <span className="flex items-center gap-2">
-                              <CalendarIcon className="w-4 h-4 text-primary" />
+                            <span>
                               {formData.preferredDate
                                 ? format(new Date(formData.preferredDate), "PPP")
                                 : "Select a date"}
@@ -298,12 +297,9 @@ const Booking = () => {
                           setFormData((prev) => ({ ...prev, preferredTime: value }))
                         }
                       >
-                        <SelectTrigger className="w-full h-10 [&>svg.lucide-chevron-down]:hidden">
+                        <SelectTrigger className="w-full h-10 [&>svg.lucide-chevron-down]:hidden border-input">
                           <span className="flex items-center justify-between w-full">
-                            <span className="flex items-center gap-2">
-                              <Clock className="w-4 h-4 text-primary" />
-                              <SelectValue placeholder="Select a time" />
-                            </span>
+                            <SelectValue placeholder="Select a time" />
                             <Clock className="w-4 h-4 opacity-50" />
                           </span>
                         </SelectTrigger>

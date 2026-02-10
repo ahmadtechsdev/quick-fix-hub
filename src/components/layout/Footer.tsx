@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Wrench, Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -27,9 +28,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <Wrench className="w-5 h-5 text-primary-foreground" />
-              </div>
+              <img src={logo} alt="HandymanAfrica" className="h-10 w-10 object-contain" />
               <span className="font-display font-bold text-xl">
                 Handyman<span className="text-primary">Africa</span>
               </span>

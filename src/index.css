@@ -17,8 +17,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 20% 15%;
 
-    /* Primary - Deep Teal (Trust & Reliability) */
-    --primary: 168 76% 32%;
+    /* Primary - Deep Blue (Trust & Reliability) */
+    --primary: 220 100% 30%;
     --primary-foreground: 0 0% 100%;
 
     /* Secondary - Soft Gray */
@@ -40,7 +40,7 @@
     /* Border & Input */
     --border: 220 14% 90%;
     --input: 220 14% 90%;
-    --ring: 168 76% 32%;
+    --ring: 220 100% 30%;
 
     --radius: 0.75rem;
 
@@ -52,12 +52,12 @@
     --warning-foreground: 220 20% 10%;
 
     /* Hero Gradient */
-    --hero-gradient-start: 168 76% 32%;
-    --hero-gradient-end: 168 60% 25%;
+    --hero-gradient-start: 220 100% 30%;
+    --hero-gradient-end: 220 80% 22%;
 
     /* Trust Badge */
-    --trust-bg: 168 40% 96%;
-    --trust-border: 168 40% 85%;
+    --trust-bg: 220 40% 96%;
+    --trust-border: 220 40% 85%;
 
     /* Sidebar */
     --sidebar-background: 0 0% 98%;
@@ -67,7 +67,7 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 168 76% 32%;
+    --sidebar-ring: 220 100% 30%;
   }
 
   .dark {
@@ -80,8 +80,8 @@
     --popover: 220 20% 13%;
     --popover-foreground: 40 33% 98%;
 
-    --primary: 168 70% 45%;
-    --primary-foreground: 220 20% 10%;
+    --primary: 220 90% 50%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 220 14% 20%;
     --secondary-foreground: 40 33% 95%;
@@ -97,10 +97,10 @@
 
     --border: 220 14% 25%;
     --input: 220 14% 25%;
-    --ring: 168 70% 45%;
+    --ring: 220 90% 50%;
 
-    --trust-bg: 168 30% 15%;
-    --trust-border: 168 30% 25%;
+    --trust-bg: 220 30% 15%;
+    --trust-border: 220 30% 25%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -109,7 +109,7 @@
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 168 70% 45%;
+    --sidebar-ring: 220 90% 50%;
   }
 }
 
@@ -150,7 +150,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(168 60% 40%) 100%);
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(220 80% 45%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

@@ -92,8 +92,51 @@ const Booking = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission (replace with actual form service like Formspree)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const serviceName = selectedService?.title || formData.service;
+    const dateFormatted = formData.preferredDate
+      ? format(new Date(formData.preferredDate), 'MMMM d, yyyy')
+      : 'Not specified';
+    const timeFormatted = formData.preferredTime || 'Not specified';
+
+    // 1. Submit to Formspree
+    try {
+      await fetch('https://formspree.io/f/xaqdqowy', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          Service: serviceName,
+          'Full Name': formData.fullName,
+          'Phone Number': formData.phone,
+          'Email Address': formData.email,
+          'Service Address': formData.address,
+          'Preferred Date': dateFormatted,
+          'Preferred Time': timeFormatted,
+          'Additional Notes': formData.notes || 'None',
+        }),
+      });
+    } catch {
+      // Continue to WhatsApp even if Formspree fails
+    }
+
+    // 2. Redirect to WhatsApp with pre-filled message
+    const whatsappNumber = '2349043400000';
+    const message = `Hello HandymanAfrica 👋
+
+New Booking Request
+
+Service: ${serviceName}
+Name: ${formData.fullName}
+Phone: ${formData.phone}
+Email: ${formData.email}
+Address: ${formData.address}
+Preferred Date: ${dateFormatted}
+Preferred Time: ${timeFormatted}
+Additional Notes: ${formData.notes || 'None'}
+
+Please confirm this booking. Thank you.`;
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
 
     setIsSubmitting(false);
     setStep(3);

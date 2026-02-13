@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Shield, Clock, BadgeCheck, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import TrustBadge from '../common/TrustBadge';
+import handymanHero from '@/assets/handyman-1.jpg';
 
 const HeroSection = () => {
   return (
@@ -75,7 +76,7 @@ const HeroSection = () => {
               {/* Main Image Container */}
               <div className="absolute inset-4 rounded-3xl gradient-hero floating-shadow overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=600&fit=crop"
+                  src={handymanHero}
                   alt="Professional handyman at work"
                   className="w-full h-full object-cover mix-blend-overlay opacity-80"
                 />

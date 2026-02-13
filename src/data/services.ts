@@ -18,7 +18,7 @@ export const services = [
       'Generator installation',
     ],
     
-    image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=300&fit=crop',
+    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop',
   },
   {
     id: 'plumbing',
@@ -52,7 +52,7 @@ export const services = [
       'Emergency repairs',
     ],
     
-    image: 'https://images.unsplash.com/photo-1631545806609-21a8b2c9e8f0?w=400&h=300&fit=crop',
+    image: 'https://images.unsplash.com/photo-1635048424329-a9bfb146d7aa?w=400&h=300&fit=crop',
   },
   {
     id: 'carpentry',
@@ -103,7 +103,7 @@ export const services = [
       'Security system installation',
     ],
     
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop',
+    image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=400&h=300&fit=crop',
   },
 ];
 

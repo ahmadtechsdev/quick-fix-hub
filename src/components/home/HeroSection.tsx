@@ -53,7 +53,7 @@ const HeroSection = () => {
             {/* Stats */}
             <div className="flex items-center gap-8 pt-4">
               <div>
-                <p className="font-display font-bold text-3xl text-foreground">500+</p>
+                <p className="font-display font-bold text-3xl text-foreground"><p className="font-display font-bold text-3xl text-foreground">100+</p></p>
                 <p className="text-sm text-muted-foreground">Jobs Completed</p>
               </div>
               <div className="w-px h-12 bg-border" />

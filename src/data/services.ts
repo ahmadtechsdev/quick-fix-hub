@@ -1,6 +1,7 @@
 import { Zap, Droplets, Wind, Hammer, PaintBucket, Wrench } from 'lucide-react';
 import handyman2 from '@/assets/handyman-2.jpg';
 import handyman3 from '@/assets/handyman-3.jpg';
+import installationImg from '@/assets/installation.jpg';
 
 export const services = [
   {
@@ -103,7 +104,7 @@ export const services = [
       'Security system installation',
     ],
     
-    image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=400&h=300&fit=crop',
+    image: installationImg,
   },
 ];
 

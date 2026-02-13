@@ -2,6 +2,7 @@ import { Zap, Droplets, Wind, Hammer, PaintBucket, Wrench } from 'lucide-react';
 import handyman2 from '@/assets/handyman-2.jpg';
 import handyman3 from '@/assets/handyman-3.jpg';
 import installationImg from '@/assets/installation.jpg';
+import electricianImg from '@/assets/electrician.jpg';
 
 export const services = [
   {
@@ -19,7 +20,7 @@ export const services = [
       'Generator installation',
     ],
     
-    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop',
+    image: electricianImg,
   },
   {
     id: 'plumbing',

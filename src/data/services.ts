@@ -1,4 +1,6 @@
 import { Zap, Droplets, Wind, Hammer, PaintBucket, Wrench } from 'lucide-react';
+import handyman2 from '@/assets/handyman-2.jpg';
+import handyman3 from '@/assets/handyman-3.jpg';
 
 export const services = [
   {
@@ -67,7 +69,7 @@ export const services = [
       'Trim and molding work',
     ],
     
-    image: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&h=300&fit=crop',
+    image: handyman3,
   },
   {
     id: 'painting',
@@ -84,7 +86,7 @@ export const services = [
       'Color consultation',
     ],
     
-    image: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=400&h=300&fit=crop',
+    image: handyman2,
   },
   {
     id: 'installations',

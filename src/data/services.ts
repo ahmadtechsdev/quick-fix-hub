@@ -52,7 +52,7 @@ export const services = [
       'Emergency repairs',
     ],
     
-    image: 'https://images.unsplash.com/photo-1635048424329-a9bfb146d7aa?w=400&h=300&fit=crop',
+    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=300&fit=crop',
   },
   {
     id: 'carpentry',

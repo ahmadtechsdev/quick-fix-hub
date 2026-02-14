@@ -101,7 +101,7 @@ const Header = () => {
                   Call Now
                 </Button>
               </a>
-              <Link to="/booking" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/booking" onClick={() => setIsMenuOpen(false)} className="hidden md:block">
                 <Button variant="hero" className="w-full">
                   Book a Handyman
                 </Button>

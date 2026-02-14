@@ -22,7 +22,7 @@ const CTASection = () => {
               Fast response, quality work, guaranteed satisfaction.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Link to="/booking">
+              <Link to="/booking" className="hidden md:inline-block">
                 <Button variant="hero" size="xl" className="gap-2 group">
                   Book Now
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

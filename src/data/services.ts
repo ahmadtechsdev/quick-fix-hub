@@ -6,6 +6,57 @@ import electricianImg from '@/assets/electrician.jpg';
 
 export const services = [
   {
+    id: 'installations',
+    icon: Wrench,
+    title: 'Installations',
+    shortDescription: 'Professional installation of appliances, fixtures, and more.',
+    fullDescription: 'From TVs to ceiling fans, our technicians ensure proper installation of all your home fixtures and appliances. Safe, secure, and done right.',
+    includes: [
+      'TV mounting',
+      'Ceiling fan installation',
+      'Appliance setup',
+      'Shelving and storage',
+      'Smart home devices',
+      'Security system installation',
+    ],
+    
+    image: installationImg,
+  },
+  {
+    id: 'painting',
+    icon: PaintBucket,
+    title: 'Painting',
+    shortDescription: 'Interior and exterior painting with premium finishes.',
+    fullDescription: 'Transform your space with our professional painting services. We use high-quality paints and meticulous techniques for flawless results.',
+    includes: [
+      'Interior painting',
+      'Exterior painting',
+      'Wall preparation and repair',
+      'Texture and specialty finishes',
+      'Cabinet refinishing',
+      'Color consultation',
+    ],
+    
+    image: handyman2,
+  },
+  {
+    id: 'carpentry',
+    icon: Hammer,
+    title: 'Carpentry',
+    shortDescription: 'Custom woodwork, furniture repair, and structural carpentry.',
+    fullDescription: 'Our skilled carpenters bring craftsmanship to every project. From custom furniture to structural repairs, we deliver quality woodwork.',
+    includes: [
+      'Custom furniture building',
+      'Cabinet installation',
+      'Door and window fitting',
+      'Deck and fence construction',
+      'Furniture repair',
+      'Trim and molding work',
+    ],
+    
+    image: handyman3,
+  },
+  {
     id: 'electrical',
     icon: Zap,
     title: 'Electrical Services',
@@ -55,57 +106,6 @@ export const services = [
     ],
     
     image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=300&fit=crop',
-  },
-  {
-    id: 'carpentry',
-    icon: Hammer,
-    title: 'Carpentry',
-    shortDescription: 'Custom woodwork, furniture repair, and structural carpentry.',
-    fullDescription: 'Our skilled carpenters bring craftsmanship to every project. From custom furniture to structural repairs, we deliver quality woodwork.',
-    includes: [
-      'Custom furniture building',
-      'Cabinet installation',
-      'Door and window fitting',
-      'Deck and fence construction',
-      'Furniture repair',
-      'Trim and molding work',
-    ],
-    
-    image: handyman3,
-  },
-  {
-    id: 'painting',
-    icon: PaintBucket,
-    title: 'Painting',
-    shortDescription: 'Interior and exterior painting with premium finishes.',
-    fullDescription: 'Transform your space with our professional painting services. We use high-quality paints and meticulous techniques for flawless results.',
-    includes: [
-      'Interior painting',
-      'Exterior painting',
-      'Wall preparation and repair',
-      'Texture and specialty finishes',
-      'Cabinet refinishing',
-      'Color consultation',
-    ],
-    
-    image: handyman2,
-  },
-  {
-    id: 'installations',
-    icon: Wrench,
-    title: 'Installations',
-    shortDescription: 'Professional installation of appliances, fixtures, and more.',
-    fullDescription: 'From TVs to ceiling fans, our technicians ensure proper installation of all your home fixtures and appliances. Safe, secure, and done right.',
-    includes: [
-      'TV mounting',
-      'Ceiling fan installation',
-      'Appliance setup',
-      'Shelving and storage',
-      'Smart home devices',
-      'Security system installation',
-    ],
-    
-    image: installationImg,
   },
 ];
 

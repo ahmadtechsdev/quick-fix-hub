@@ -38,7 +38,7 @@ const HeroSection = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/booking">
+              <Link to="/booking" className="hidden md:inline-block">
                 <Button variant="hero" size="xl" className="gap-2 group">
                   Book a Handyman
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

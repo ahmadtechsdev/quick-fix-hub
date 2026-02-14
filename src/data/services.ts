@@ -3,6 +3,7 @@ import handyman2 from '@/assets/handyman-2.jpg';
 import handyman3 from '@/assets/handyman-3.jpg';
 import installationImg from '@/assets/installation.jpg';
 import electricianImg from '@/assets/electrician.jpg';
+import acRepairImg from '@/assets/ac-repair.jpg';
 
 export const services = [
   {
@@ -105,7 +106,7 @@ export const services = [
       'Emergency repairs',
     ],
     
-    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=300&fit=crop',
+    image: acRepairImg,
   },
 ];
 
